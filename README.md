@@ -8,4 +8,7 @@ For those who are looking at this from my URICA research, in order to run this y
 4. change training filepath to the filepath of the csv
 5. run it and enjoy waiting for a long time
 
+current issues:
+- version mismatch
+- does not support multivariable time series forecasting
    
