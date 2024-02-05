@@ -1,3 +1,5 @@
+#tensorflow testing
+
 import os
 import datetime
 import IPython
@@ -59,7 +61,7 @@ model1.add(Dense(1, activation='linear'))
 model1.summary() #print model summary
 
 cp = ModelCheckpoint('model1/', save_best_only=True)
-model1.compile(loss=MeanSquaredError(reduction=tf.keras.losses.Reduction.NONE), optimizer=Adam(learning_rate=0.00001), metrics=[MeanSquaredError()])
+model1.compile(loss=MeanSquaredError(reduction='auto'), optimizer=Adam(learning_rate=0.00001), metrics=[MeanSquaredError()])
 #higher the numer the faster the model will decrease loss
 #we dont want this because we want to find local min
 
