@@ -9,6 +9,6 @@ For those who are looking at this from my URICA research, in order to run this y
 5. run it and enjoy waiting for a long time
 
 current issues:
-- version mismatch
-- does not support multivariable time series forecasting
+- version mismatch (causes loss reduction to freak out when it shouldnt. Code worked before, update and version changes bugged some stuff)
+- does not support multivariable time series forecasting (future project)
    
