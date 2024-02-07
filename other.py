@@ -9,11 +9,14 @@ import pandas as pd
 import seaborn as sns
 import tensorflow as tf 
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import *
+import tensorflow.keras.layers as layers
 from tensorflow.keras.callbacks import ModelCheckpoint
 from tensorflow.keras.losses import MeanSquaredError
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models import load_model
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.layers import LSTM
+from tensorflow.keras.layers import InputLayer
 
 csv_path = "newkirk.csv"
 df = pd.read_csv(csv_path, index_col="DATE")
@@ -59,7 +62,7 @@ model1.add(Dense(1, activation='linear'))
 model1.summary() #print model summary
 
 cp = ModelCheckpoint('model1/', save_best_only=True)
-model1.compile(loss=MeanSquaredError(reduction=tf.keras.losses.Reduction.NONE), optimizer=Adam(learning_rate=0.00001), metrics=[MeanSquaredError()])
+model1.compile(loss=MeanSquaredError(tf.keras.losses.Reduction.NONE), optimizer=Adam(learning_rate=0.00001), metrics=[MeanSquaredError()]) 
 #higher the numer the faster the model will decrease loss
 #we dont want this because we want to find local min
 
