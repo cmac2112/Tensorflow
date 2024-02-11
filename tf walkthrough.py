@@ -19,7 +19,7 @@ fashion_mnist = tf.keras.datasets.fashion_mnist
 #each image is mapped to a single label, since the class names are not included
 #store them here to use later when plotting images
 
-class_names = ['T-shirt/top', 'Pants', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+class_names = ['T-shirt/top', 'Pants', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Shoe']
 
 y = train_images.shape
 x = len(train_labels)
@@ -70,7 +70,7 @@ model.compile(optimizer='adam',
 #3. ask model to make predictions about a test set, ex test_images
 #4. verify predictions match labels from test labels
 
-model.fit(train_images, train_labels, epochs=10)
+model.fit(train_images, train_labels, epochs=50)
 
 #evaluate accuracy
 test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
