@@ -19,6 +19,8 @@ fashion_mnist = tf.keras.datasets.fashion_mnist
 #each image is mapped to a single label, since the class names are not included
 #store them here to use later when plotting images
 
+#0, T-shirt/top, 1, Pants, 2, Pullover, 3, Dress, 4, Coat, 5, Sandal, 6, Shirt, 7, Sneaker, 8, Bag, 9, Shoe
+
 class_names = ['T-shirt/top', 'Pants', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Shoe']
 
 y = train_images.shape
